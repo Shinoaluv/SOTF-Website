@@ -31,12 +31,37 @@ function Home() {
           </div>
         </div>
 
+        {/* LOGO + QUICK LINKS CARD */}
         <div className="hero-logo-side">
-          <img
-            src={logo}
-            alt="Sound of the Future logo"
-            className="hero-side-logo"
-          />
+          <div className="hero-logo-card">
+            <div className="hero-logo-inner">
+              <img
+                src={logo}
+                alt="Sound of the Future logo"
+                className="hero-side-logo"
+              />
+            </div>
+
+            <div className="hero-logo-info">
+              <p className="hero-logo-label">STAY CONNECTED</p>
+
+              <h3>Follow our journey.</h3>
+
+              <p>
+                Find our latest updates, social media, podcast, and quick links
+                all in one place.
+              </p>
+
+              <a
+                href="https://linktr.ee/SoundoftheFuture?utm_source=linktree_profile_share&ltsid=0d7b1204-e7a1-4f23-bf9f-a7379264f9a5"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="linktree-button"
+              >
+                Updates & Quick Links →
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -44,9 +69,7 @@ function Home() {
       <section className="home-mission">
         <p className="section-label">OUR MISSION</p>
 
-        <h2>
-          Protect hearing. Share stories. Build change.
-        </h2>
+        <h2>Protect hearing. Share stories. Build change.</h2>
 
         <p>
           Through education, advocacy, community outreach, and youth leadership,
@@ -70,7 +93,7 @@ function Home() {
 
         <p>
           Yet hearing health is often overlooked, especially among young
-          people. We work to make hearing health education easier to understand,
+          people. We work to make hearing-health education easier to understand,
           more accessible, and part of everyday conversation.
         </p>
 
@@ -85,9 +108,7 @@ function Home() {
           <div>
             <p className="section-label">OUR IMPACT</p>
 
-            <h2>
-              From one conversation to thousands.
-            </h2>
+            <h2>From one conversation to thousands.</h2>
           </div>
 
           <Link to="/impact" className="secondary-button">
@@ -108,17 +129,13 @@ function Home() {
           <div className="home-stat">
             <h3>600+</h3>
 
-            <p>
-              People educated at STEM GO PRO FEST
-            </p>
+            <p>People educated at STEM GO PRO FEST</p>
           </div>
 
           <div className="home-stat">
             <h3>$1,200+</h3>
 
-            <p>
-              Raised through Benevity to support our mission
-            </p>
+            <p>Raised through Benevity to support our mission</p>
           </div>
         </div>
       </section>
@@ -129,9 +146,7 @@ function Home() {
           <div>
             <p className="section-label">WHAT WE DO</p>
 
-            <h2>
-              Awareness is only the beginning.
-            </h2>
+            <h2>Awareness is only the beginning.</h2>
           </div>
 
           <Link to="/programs" className="secondary-button">
@@ -184,13 +199,9 @@ function Home() {
       {/* GET INVOLVED */}
       <section className="home-join">
         <div>
-          <p className="section-label">
-            JOIN THE MOVEMENT
-          </p>
+          <p className="section-label">JOIN THE MOVEMENT</p>
 
-          <h2>
-            Your voice can help shape the future of hearing health.
-          </h2>
+          <h2>Your voice can help shape the future of hearing health.</h2>
 
           <p>
             Volunteer, start a branch, partner with us, invite us to your school,
