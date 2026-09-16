@@ -85,41 +85,59 @@ function Contact() {
       </section>
 
       <section className="center-cta">
-        <p className="section-label">FOLLOW OUR WORK</p>
+    <p className="section-label">FOLLOW OUR WORK</p>
 
-        <h2>
-          Stay connected with Sound of the Future.
-        </h2>
+    <h2>
+        Stay connected with Sound of the Future.
+    </h2>
 
-        <div className="social-buttons">
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="secondary-button"
-          >
-            Instagram
-          </a>
+    <div className="social-buttons">
+        <a
+        href="https://www.instagram.com/sound_of_the_future/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="secondary-button"
+        >
+        Instagram
+        </a>
 
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="secondary-button"
-          >
-            TikTok
-          </a>
+        <a
+        href="https://www.tiktok.com/@sound.of.the.futu"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="secondary-button"
+        >
+        TikTok
+        </a>
 
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="secondary-button"
-          >
-            YouTube
-          </a>
-        </div>
-      </section>
+        <a
+        href="https://www.youtube.com/@soundofthefuture"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="secondary-button"
+        >
+        YouTube
+        </a>
+
+        <a
+        href="YOUR-SPOTIFY-LINK-HERE"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="secondary-button"
+        >
+        Spotify
+        </a>
+
+        <a
+        href="YOUR-IHEARTRADIO-LINK-HERE"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="secondary-button"
+        >
+        iHeartRadio
+        </a>
+    </div>
+    </section>
     </main>
   );
 }
