@@ -26,7 +26,7 @@ function Contact() {
           </p>
 
           <a
-            href="mailto:soundofthefuture@example.com"
+            href="mailto:soundofthefutureofficial@gmail.com"
             className="primary-button"
           >
             Send an Email
@@ -43,7 +43,7 @@ function Contact() {
           </p>
 
           <a
-            href="mailto:soundofthefuture@example.com?subject=Partnership Inquiry"
+            href="mailto:soundofthefutureofficial@gmail.com?subject=Partnership Inquiry"
             className="secondary-button"
           >
             Partnership Inquiry
@@ -60,7 +60,7 @@ function Contact() {
           </p>
 
           <a
-            href="mailto:soundofthefuture@example.com?subject=School Outreach Inquiry"
+            href="mailto:soundofthefutureofficial@gmail.com?subject=School Outreach Inquiry"
             className="secondary-button"
           >
             School Outreach
@@ -76,7 +76,7 @@ function Contact() {
           </p>
 
           <a
-            href="mailto:soundofthefuture@example.com?subject=Media Inquiry"
+            href="mailto:soundofthefutureofficial@gmail.com?subject=Media Inquiry"
             className="secondary-button"
           >
             Media Inquiry
