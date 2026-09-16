@@ -111,7 +111,7 @@ function Contact() {
         </a>
 
         <a
-        href="https://www.youtube.com/@soundofthefuture"
+        href="https://www.youtube.com/@soundofthefutureofficial"
         target="_blank"
         rel="noopener noreferrer"
         className="secondary-button"
@@ -120,7 +120,7 @@ function Contact() {
         </a>
 
         <a
-        href="YOUR-SPOTIFY-LINK-HERE"
+        href="https://open.spotify.com/show/033vuNIwHRVaqR0F1wbr3v?si=X1cC1aWxSzuu2_uSJXzqpQ&nd=1&dlsi=710bea1d852f489e"
         target="_blank"
         rel="noopener noreferrer"
         className="secondary-button"
@@ -129,7 +129,7 @@ function Contact() {
         </a>
 
         <a
-        href="YOUR-IHEARTRADIO-LINK-HERE"
+        href="https://www.iheart.com/podcast/269-the-sound-of-the-future-po-340113210"
         target="_blank"
         rel="noopener noreferrer"
         className="secondary-button"
