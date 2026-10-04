@@ -1,16 +1,14 @@
-import catherinePhoto from "../assets/images/Catherine.png";
-import sanniPhoto from "../assets/images/Sanni.png";
+import catherinePhoto from "../assets/images/Catherine.webp";
+import sanniPhoto from "../assets/images/Sanni.webp";
 
 function About() {
   return (
-    <main className="page">
+    <main id="main-content" className="page">
       {/* ABOUT HERO */}
       <section className="page-hero">
         <p className="section-label">ABOUT US</p>
 
-        <h1>
-          We believe hearing health deserves to be heard.
-        </h1>
+        <h1>We believe hearing health deserves to be heard.</h1>
 
         <p>
           Sound of the Future is a youth-led nonprofit focused on hearing-health
@@ -51,9 +49,8 @@ function About() {
             taught about hearing health compared with topics like nutrition,
             exercise, dental care, and mental health. They founded Sound of the
             Future with two goals: to help young people protect their hearing
-            before preventable damage occurs and to build greater
-            understanding, inclusion, and support for the Deaf and
-            hard-of-hearing community.
+            before preventable damage occurs and to build greater understanding,
+            inclusion, and support for the Deaf and hard-of-hearing community.
           </p>
         </div>
       </section>
@@ -63,9 +60,7 @@ function About() {
         <div className="founders-heading">
           <p className="section-label">MEET THE FOUNDERS</p>
 
-          <h2>
-            Two students. One shared mission.
-          </h2>
+          <h2>Two students. One shared mission.</h2>
 
           <p>
             Sound of the Future is led by two high school seniors in CFISD who
@@ -81,13 +76,12 @@ function About() {
               src={catherinePhoto}
               alt="Catherine Lin"
               className="founder-photo"
+              loading="lazy"
             />
 
             <h3>Catherine Lin</h3>
 
-            <p className="founder-role">
-              Co-Founder & CEO
-            </p>
+            <p className="founder-role">Co-Founder & CEO</p>
 
             <p>
               Catherine is a senior in high school in CFISD and the Co-Founder
@@ -106,20 +100,19 @@ function About() {
               src={sanniPhoto}
               alt="Sanni Arimanda"
               className="founder-photo"
+              loading="lazy"
             />
 
             <h3>Sanni Arimanda</h3>
 
-            <p className="founder-role">
-              Co-Founder & COO
-            </p>
+            <p className="founder-role">Co-Founder & COO</p>
 
             <p>
               Sanni is a senior in high school in CFISD and the Co-Founder and
               COO of Sound of the Future. She helps lead the organization&apos;s
               operations, programs, outreach, and community initiatives. Her
-              connection to friends and family who have experienced hearing
-              loss helped shape Sound of the Future&apos;s focus on prevention,
+              connection to friends and family who have experienced hearing loss
+              helped shape Sound of the Future&apos;s focus on prevention,
               inclusion, and youth advocacy.
             </p>
           </div>

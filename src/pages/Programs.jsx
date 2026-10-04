@@ -1,12 +1,12 @@
+import { Link } from "react-router-dom";
+import { photos } from "../data";
 function Programs() {
   return (
-    <main className="page">
+    <main id="main-content" className="page">
       <section className="page-hero">
         <p className="section-label">OUR PROGRAMS</p>
 
-        <h1>
-          Turning hearing health awareness into action.
-        </h1>
+        <h1>Turning hearing health awareness into action.</h1>
 
         <p>
           Through education, community outreach, youth leadership, and
@@ -15,6 +15,18 @@ function Programs() {
         </p>
       </section>
 
+      <div className="page-photo-strip">
+        <img
+          src={photos.outreach}
+          alt="Our team sharing hearing-health education at Shell Energy Stadium"
+          loading="lazy"
+        />
+        <img
+          src={photos.resources}
+          alt="Hearing-health educational resources available at a community venue"
+          loading="lazy"
+        />
+      </div>
       <section className="card-grid">
         <div className="info-card">
           <span>01</span>
@@ -22,9 +34,9 @@ function Programs() {
           <h3>Hearing Health Education</h3>
 
           <p>
-            We create educational presentations, workshops, digital content,
-            and school outreach programs that teach young people how everyday
-            habits can affect their hearing.
+            We create educational presentations, workshops, digital content, and
+            school outreach programs that teach young people how everyday habits
+            can affect their hearing.
           </p>
         </div>
 
@@ -46,8 +58,8 @@ function Programs() {
           <h3>Care Packages</h3>
 
           <p>
-            Our hearing-health care packages provide practical resources such
-            as hearing-protection materials and educational guides about safe
+            Our hearing-health care packages provide practical resources such as
+            hearing-protection materials and educational guides about safe
             listening habits.
           </p>
         </div>
@@ -71,8 +83,8 @@ function Programs() {
 
           <p>
             Students can bring Sound of the Future into their own schools and
-            communities by creating branches that lead local projects,
-            awareness campaigns, and service initiatives.
+            communities by creating branches that lead local projects, awareness
+            campaigns, and service initiatives.
           </p>
         </div>
 
@@ -82,11 +94,17 @@ function Programs() {
           <h3>Advocacy & Representation</h3>
 
           <p>
-            We work to amplify Deaf and hard-of-hearing voices while
-            encouraging young people to become advocates for accessibility,
-            inclusion, and hearing health.
+            We work to amplify Deaf and hard-of-hearing voices while encouraging
+            young people to become advocates for accessibility, inclusion, and
+            hearing health.
           </p>
         </div>
+      </section>
+      <section className="center-cta">
+        <h2>Bring hearing-health education to your community.</h2>
+        <Link to="/contact" className="primary-button">
+          Connect with our team ↗
+        </Link>
       </section>
     </main>
   );

@@ -1,97 +1,211 @@
-function Impact() {
+import { Link } from "react-router-dom";
+import { photos, impactStats, links } from "../data";
+export default function Impact() {
   return (
-    <main className="page">
+    <main id="main-content" className="page impact-page">
       <section className="page-hero">
-        <p className="section-label">OUR IMPACT</p>
-
+        <p className="section-label">Our impact</p>
         <h1>
-          Awareness matters most when it reaches people.
+          Real people.
+          <br />
+          Growing impact.
         </h1>
-
         <p>
-          From local community events to media outreach and educational
-          programs, Sound of the Future is helping make hearing health a
-          conversation more people are having.
+          From a conversation at a community market to a story shared on the
+          news, here’s how we’re bringing hearing health to more people.
         </p>
+        <nav className="section-nav" aria-label="Impact sections">
+          <a href="#community">Community</a>
+          <a href="#media">Media & education</a>
+          <a href="#supporters">Fundraising & supporters</a>
+        </nav>
       </section>
-
-      <section className="stats-section">
-        <div className="stat">
-          <h2>120K+</h2>
-          <p>People reached through education, outreach, media, and online content</p>
-        </div>
-
-        <div className="stat">
-          <h2>600+</h2>
-          <p>Students and adults reached at STEM GO PRO FEST</p>
-        </div>
-
-        <div className="stat">
-          <h2>250+</h2>
-          <p>People reached at the Girls Gotta Shop Market</p>
+      <section className="impact-band">
+        <div className="wrap">
+          <div className="impact-stat-grid">
+            {impactStats.map(([n, label, detail]) => (
+              <div className="impact-number" key={label}>
+                <strong>{n}</strong>
+                <h2>{label}</h2>
+                <p>{detail}</p>
+              </div>
+            ))}
+          </div>
+          <p className="data-note">
+            Organization-reported figures · Updated October 2026.
+          </p>
         </div>
       </section>
-
-      <section className="card-grid">
-        <div className="info-card">
-          <span>COMMUNITY</span>
-          <h3>STEM GO PRO FEST</h3>
-          <p>
-            At Shell Energy Stadium, we educated more than 600 students and
-            adults about hearing health and safe listening habits.
-          </p>
+      <section id="community" className="section-space wrap">
+        <div className="section-heading">
+          <div>
+            <p className="section-label">In the community</p>
+            <h2>Showing up. Sharing what we know.</h2>
+          </div>
         </div>
-
-        <div className="info-card">
-          <span>FUNDRAISING</span>
-          <h3>Community Support</h3>
-          <p>
-            We raised more than $1,200 through Benevity and received support
-            from local businesses through funding, coupons, discount cards, and
-            donated resources.
-          </p>
+        <article className="event-feature">
+          <img
+            src={photos.stem}
+            alt="Sound of the Future's educational display at Shell Energy Stadium"
+            loading="lazy"
+            width="1200"
+            height="1600"
+          />
+          <div>
+            <p className="story-category">July 30, 2026 · Houston</p>
+            <h3>STEM GO PRO FEST</h3>
+            <p>
+              At TechFest’s STEM GO PRO FEST at Shell Energy Stadium, we
+              educated <strong>625+ students and adults</strong>, from
+              kindergarteners to high school students and their families.
+            </p>
+            <p>
+              Our booth brought hearing-health education into a day of
+              discovery, with resources and conversations about protecting
+              hearing.
+            </p>
+            <Link className="inline-link" to="/programs">
+              Explore our education work →
+            </Link>
+          </div>
+        </article>
+        <article className="event-feature reverse">
+          <img
+            src={photos.market}
+            alt="Sound of the Future's community market table with educational materials and fundraising items"
+            loading="lazy"
+            width="1600"
+            height="1200"
+          />
+          <div>
+            <p className="story-category">Community outreach & fundraising</p>
+            <h3>Girls Gotta Shop Market</h3>
+            <p>
+              We educated <strong>250+ people</strong> about hearing health and
+              raised <strong>over $200</strong> through market sales.
+            </p>
+            <p>
+              A table, a conversation, and a chance to make hearing health part
+              of everyday life.
+            </p>
+          </div>
+        </article>
+      </section>
+      <section id="media" className="media-impact">
+        <div className="wrap section-space">
+          <div className="section-heading">
+            <div>
+              <p className="section-label">Media & education</p>
+              <h2>Taking the conversation further.</h2>
+            </div>
+          </div>
+          <div className="media-feature">
+            <figure>
+              <div className="tv-photo">
+                <img
+                  src={photos.interview}
+                  alt="The founders discussing hearing health on KPRC 2 News"
+                  loading="lazy"
+                  width="900"
+                  height="880"
+                />
+              </div>
+              <figcaption>Sound of the Future on KPRC 2 News.</figcaption>
+            </figure>
+            <div>
+              <h3>Sharing our story on KPRC 2</h3>
+              <p>
+                Our founders shared Sound of the Future’s mission and
+                hearing-health advocacy with a wider Houston audience.
+              </p>
+              <h3>On air with KPFT</h3>
+              <p>
+                A 30-second community announcement on KPFT Houston Community
+                Radio brought our message to radio listeners.
+              </p>
+            </div>
+          </div>
+          <div className="education-list">
+            <article>
+              <h3>100+ weekly podcast listeners</h3>
+              <p>
+                Weekly hearing-health education on Spotify, iHeartRadio, and
+                YouTube.
+              </p>
+              <a className="inline-link" href={links.spotify}>
+                Listen to the podcast ↗
+              </a>
+            </article>
+            <article>
+              <h3>600+ people educated online</h3>
+              <p>
+                Weekly hearing-health and protection posts across Instagram,
+                Facebook, and TikTok.
+              </p>
+              <a className="inline-link" href={links.instagram}>
+                Follow our updates ↗
+              </a>
+            </article>
+            <article>
+              <h3>Educational cohorts</h3>
+              <p>
+                Hosted learning opportunities that bring people together around
+                hearing-health education.
+              </p>
+              <Link className="inline-link" to="/get-involved">
+                Find a way to join →
+              </Link>
+            </article>
+          </div>
         </div>
-
-        <div className="info-card">
-          <span>MEDIA</span>
-          <h3>Radio & Public Awareness</h3>
-          <p>
-            Sound of the Future has shared its mission through radio and other
-            media outreach to bring hearing health education to a wider public
-            audience.
-          </p>
+      </section>
+      <section id="supporters" className="section-space wrap">
+        <div className="section-heading">
+          <div>
+            <p className="section-label">Made possible by community</p>
+            <h2>Support that makes a difference.</h2>
+          </div>
+          <Link className="inline-link" to="/donate">
+            Support our mission →
+          </Link>
         </div>
-
-        <div className="info-card">
-          <span>DIGITAL</span>
-          <h3>Podcast & Social Media</h3>
-          <p>
-            We create weekly hearing-health content across Instagram, Facebook,
-            and TikTok, while our podcast reaches listeners through Spotify,
-            iHeartRadio, and YouTube.
-          </p>
+        <div className="fundraising-row">
+          <div>
+            <strong>$1,200+</strong>
+            <p>Raised through Benevity</p>
+          </div>
+          <div>
+            <strong>$200+</strong>
+            <p>Raised through market sales</p>
+          </div>
         </div>
-
-        <div className="info-card">
-          <span>PODCAST</span>
-          <h3>100+ Weekly Listeners</h3>
-          <p>
-            Our podcast reaches around 100 or more listeners each week with
-            conversations about hearing health, advocacy, and personal stories.
-          </p>
-        </div>
-
-        <div className="info-card">
-          <span>OUTREACH</span>
-          <h3>Girls Gotta Shop Market</h3>
-          <p>
-            We spoke with more than 250 people and raised over $200 while
-            educating attendees about hearing health.
-          </p>
-        </div>
+        <h3 className="supporters-heading">Thank you to our supporters</h3>
+        <dl className="supporter-list">
+          <div>
+            <dt>Hopdoddy</dt>
+            <dd>150+ free kids’ meal coupons</dd>
+          </div>
+          <div>
+            <dt>JK Hair Salon</dt>
+            <dd>200+ cards offering a 20% discount</dd>
+          </div>
+          <div>
+            <dt>The Home Depot</dt>
+            <dd>$50 gift card</dd>
+          </div>
+          <div>
+            <dt>Costco</dt>
+            <dd>Community sponsor</dd>
+          </div>
+        </dl>
+      </section>
+      <section className="center-cta">
+        <p className="section-label">What comes next starts with us</p>
+        <h2>Help us reach the next person.</h2>
+        <Link to="/get-involved" className="primary-button">
+          Get involved ↗
+        </Link>
       </section>
     </main>
   );
 }
-
-export default Impact;

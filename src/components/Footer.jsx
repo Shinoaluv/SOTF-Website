@@ -1,26 +1,38 @@
 import { Link } from "react-router-dom";
-
-function Footer() {
+import { links } from "../data";
+export default function Footer() {
   return (
     <footer className="footer">
-      <h3>Sound of the Future</h3>
-
-      <p>
-        Protect hearing. Share stories. Build change.
-      </p>
-
-      <div className="footer-links">
-        <Link to="/about">About</Link>
-        <Link to="/programs">Programs</Link>
-        <Link to="/impact">Impact</Link>
-        <Link to="/get-involved">Get Involved</Link>
-        <Link to="/contact">Contact</Link>
-        <Link to="/donate">Donate</Link>
+      <div className="wrap">
+        <div className="footer-top">
+          <div>
+            <Link to="/" className="footer-brand">
+              Sound of the Future
+            </Link>
+            <p>Hear today. Protect tomorrow.</p>
+            <a href={links.email} className="footer-email">
+              soundofthefutureofficial@gmail.com
+            </a>
+          </div>
+          <nav aria-label="Footer navigation" className="footer-links">
+            <Link to="/about">About us</Link>
+            <Link to="/programs">Our work</Link>
+            <Link to="/impact">Our impact</Link>
+            <Link to="/get-involved">Get involved</Link>
+            <Link to="/contact">Contact</Link>
+            <Link to="/donate">Donate</Link>
+          </nav>
+          <div className="footer-social">
+            <a href={links.instagram}>Instagram ↗</a>
+            <a href={links.spotify}>Podcast ↗</a>
+            <a href={links.linktree}>All our links ↗</a>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <span>© {new Date().getFullYear()} Sound of the Future</span>
+          <span>Youth-led. Community-driven.</span>
+        </div>
       </div>
-
-      <p>© 2026 Sound of the Future</p>
     </footer>
   );
 }
-
-export default Footer;

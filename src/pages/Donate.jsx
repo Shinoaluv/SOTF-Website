@@ -1,12 +1,11 @@
+import { links } from "../data";
 function Donate() {
   return (
-    <main className="page">
+    <main id="main-content" className="page">
       <section className="page-hero donate-page">
         <p className="section-label">SUPPORT OUR MISSION</p>
 
-        <h1>
-          Help us make hearing health impossible to ignore.
-        </h1>
+        <h1>Help us make hearing health impossible to ignore.</h1>
 
         <p>
           Your support helps Sound of the Future create educational resources,
@@ -15,7 +14,7 @@ function Donate() {
         </p>
 
         <a
-          href="https://soundofthefuture.base44.app/donate"
+          href={links.donate}
           target="_blank"
           rel="noopener noreferrer"
           className="primary-button"
@@ -65,12 +64,10 @@ function Donate() {
       <section className="center-cta">
         <p className="section-label">EVERY CONTRIBUTION MATTERS</p>
 
-        <h2>
-          Support a louder, safer, and more inclusive future.
-        </h2>
+        <h2>Support a louder, safer, and more inclusive future.</h2>
 
         <a
-          href="https://www.zeffy.com/en-US/donation-form/sound-of-the-future"
+          href={links.donate}
           target="_blank"
           rel="noopener noreferrer"
           className="primary-button"

@@ -1,12 +1,10 @@
 function Contact() {
   return (
-    <main className="page">
+    <main id="main-content" className="page">
       <section className="page-hero">
         <p className="section-label">CONTACT US</p>
 
-        <h1>
-          Let&apos;s build something meaningful together.
-        </h1>
+        <h1>Let&apos;s build something meaningful together.</h1>
 
         <p>
           Reach out to Sound of the Future about partnerships, volunteering,
@@ -71,8 +69,8 @@ function Contact() {
           <p className="section-label">MEDIA</p>
           <h3>Media & Interview Requests</h3>
           <p>
-            For interviews, stories, podcasts, television, radio, or other
-            media opportunities, contact our team directly.
+            For interviews, stories, podcasts, television, radio, or other media
+            opportunities, contact our team directly.
           </p>
 
           <a
@@ -85,59 +83,57 @@ function Contact() {
       </section>
 
       <section className="center-cta">
-    <p className="section-label">FOLLOW OUR WORK</p>
+        <p className="section-label">FOLLOW OUR WORK</p>
 
-    <h2>
-        Stay connected with Sound of the Future.
-    </h2>
+        <h2>Stay connected with Sound of the Future.</h2>
 
-    <div className="social-buttons">
-        <a
-        href="https://www.instagram.com/sound_of_the_future/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="secondary-button"
-        >
-        Instagram
-        </a>
+        <div className="social-buttons">
+          <a
+            href="https://www.instagram.com/sound_of_the_future/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="secondary-button"
+          >
+            Instagram
+          </a>
 
-        <a
-        href="https://www.tiktok.com/@sound.of.the.futu"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="secondary-button"
-        >
-        TikTok
-        </a>
+          <a
+            href="https://www.tiktok.com/@sound.of.the.futu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="secondary-button"
+          >
+            TikTok
+          </a>
 
-        <a
-        href="https://www.youtube.com/@soundofthefutureofficial"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="secondary-button"
-        >
-        YouTube
-        </a>
+          <a
+            href="https://www.youtube.com/@soundofthefutureofficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="secondary-button"
+          >
+            YouTube
+          </a>
 
-        <a
-        href="https://open.spotify.com/show/033vuNIwHRVaqR0F1wbr3v?si=X1cC1aWxSzuu2_uSJXzqpQ&nd=1&dlsi=710bea1d852f489e"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="secondary-button"
-        >
-        Spotify
-        </a>
+          <a
+            href="https://open.spotify.com/show/033vuNIwHRVaqR0F1wbr3v?si=X1cC1aWxSzuu2_uSJXzqpQ&nd=1&dlsi=710bea1d852f489e"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="secondary-button"
+          >
+            Spotify
+          </a>
 
-        <a
-        href="https://www.iheart.com/podcast/269-the-sound-of-the-future-po-340113210"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="secondary-button"
-        >
-        iHeartRadio
-        </a>
-    </div>
-    </section>
+          <a
+            href="https://www.iheart.com/podcast/269-the-sound-of-the-future-po-340113210"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="secondary-button"
+          >
+            iHeartRadio
+          </a>
+        </div>
+      </section>
     </main>
   );
 }
