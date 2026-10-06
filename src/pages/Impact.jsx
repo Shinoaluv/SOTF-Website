@@ -120,7 +120,7 @@ export default function Impact() {
               </p>
               <h3>On air with KPFT</h3>
               <p>
-                A 30-second community announcement on KPFT Houston Community
+                A community announcement on KPFT Houston Community
                 Radio brought our message to radio listeners.
               </p>
             </div>
@@ -183,19 +183,15 @@ export default function Impact() {
         <dl className="supporter-list">
           <div>
             <dt>Hopdoddy</dt>
-            <dd>150+ free kids’ meal coupons</dd>
           </div>
           <div>
             <dt>JK Hair Salon</dt>
-            <dd>200+ cards offering a 20% discount</dd>
           </div>
           <div>
             <dt>The Home Depot</dt>
-            <dd>$50 gift card</dd>
           </div>
           <div>
             <dt>Costco</dt>
-            <dd>Community sponsor</dd>
           </div>
         </dl>
       </section>

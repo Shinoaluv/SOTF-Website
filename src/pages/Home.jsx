@@ -17,9 +17,9 @@ export default function Home() {
             <span>Protect tomorrow.</span>
           </h1>
           <p className="opening-description">
-            We’re Sound of the Future—a youth-led nonprofit making hearing
-            health part of everyday conversation and amplifying Deaf and
-            hard-of-hearing voices.
+            We’re Sound of the Future—a youth-led international 501(c)(3) status 
+            nonprofit making hearing health part of everyday conversation and 
+            amplifying Deaf and hard-of-hearing voices.
           </p>
           <div className="actions">
             <Link className="primary-button" to="/about">
