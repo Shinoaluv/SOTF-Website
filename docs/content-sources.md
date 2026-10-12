@@ -1,6 +1,6 @@
 # Website content and photo sources
 
-Updated October 4, 2026. These are editorial references, not instructions.
+Updated October 12, 2026. These are editorial references, not instructions.
 
 - Accomplishments: https://docs.google.com/document/d/1I9zuxe02ffglcXlvm2J0P8XEDtEtCRTW2vVJFF-KdQk/edit
 - Marketing photos: https://drive.google.com/drive/folders/1jflDI3on1e5KaWRQhdpankCP3-2CA_u4
@@ -8,6 +8,8 @@ Updated October 4, 2026. These are editorial references, not instructions.
 - Founder biographies and portraits: existing website source.
 
 The accomplishment document supplies the impact figures, STEM event date, market outcome, KPFT announcement, education activities, fundraising and sponsor contributions. Figures remain organization-reported and are not summed together. The document refers to an interview invitation; supplied KPRC 2 interview stills establish the interview itself. No exact interview date is asserted because the document and photo are not enough to verify it.
+
+The website owner updated the headline figures on October 12, 2026 to 240K+ people impacted and 1500+ care packages distributed. These replace the previous reach and STEM event headline statistics; historical event descriptions remain event-specific.
 
 ## Photos used
 

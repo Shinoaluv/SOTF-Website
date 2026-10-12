@@ -11,14 +11,14 @@ export const links = {
 };
 export const impactStats = [
   [
-    "170,000+",
-    "people reached",
+    "240K+",
+    "people impacted",
     "Across education, outreach, media, and online content.",
   ],
   [
-    "625+",
-    "people educated at STEM GO PRO FEST",
-    "Students and adults at Shell Energy Stadium.",
+    "1500+",
+    "care packages distributed",
+    "Hearing-health resources shared with our community.",
   ],
   [
     "$1,200+",

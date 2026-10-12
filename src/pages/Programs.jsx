@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { photos } from "../data";
+import { photos, impactStats } from "../data";
 function Programs() {
   return (
     <main id="main-content" className="page">
@@ -58,6 +58,7 @@ function Programs() {
           <h3>Care Packages</h3>
 
           <p>
+            We have distributed <strong>{impactStats[1][0]} care packages</strong>.
             Our hearing-health care packages provide practical resources such as
             hearing-protection materials and educational guides about safe
             listening habits.
