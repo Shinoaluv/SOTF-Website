@@ -17,9 +17,9 @@ export const topics = [
     answer: `We have distributed ${impactStats[1][0]} care packages. Our hearing-health care packages provide practical resources such as hearing-protection materials and educational guides about safe listening habits. For availability or requests, please contact our team.`,
   },
   {
-    id: 'join', title: 'Volunteer with us', href: links.join,
+    id: 'join', title: 'Earn service hours online', href: '/get-involved/service-hours',
     keywords: /\b(join|volunteer|volunteering|help|involved|sign up|signup)\b/i,
-    answer: 'You can volunteer with community events, educational outreach, care packages, social media, and podcast projects. Use our joining form to get involved. For specific opportunities, eligibility, or schedules, contact our team.',
+    answer: 'You can earn service hours online through Research Development, AI & Accessibility Innovation, or Journalism & Communications. Each opportunity earns 3 service hours. Research summaries are 200–500 words using 1–2 credible sources; accessibility volunteers test an approved tool and write an evaluation report; journalism articles are 500–800 words. Choose an approved topic or tool, cite sources where applicable, and submit completed work for review using the submission form on our online service hours page.',
   },
   {
     id: 'donate', title: 'Make a donation', href: links.donate,
@@ -29,7 +29,7 @@ export const topics = [
   {
     id: 'outreach', title: 'Get involved', href: '/get-involved',
     keywords: /\b(branch|school|partner|partnership|workshop|ambassador|hospital|business)\b/i,
-    answer: 'You can start a branch at your school or in your community, invite our team for a hearing-health workshop, or discuss a partnership. We work with schools, hospitals, nonprofits, businesses, and community organizations. Contact our team to discuss the next steps. Ambassador information is available on our Linktree.',
+    answer: 'You can start a branch at your school or in your community, invite our team for a hearing-health workshop, or discuss a partnership. We work with schools, hospitals, nonprofits, businesses, and community organizations. Contact our team to discuss the next steps. Branch and ambassador application forms are linked on our Get Involved page. Email us for partnership or school visit information.',
   },
   {
     id: 'programs', title: 'Explore our programs', href: '/programs',

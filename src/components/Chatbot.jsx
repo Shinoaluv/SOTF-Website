@@ -16,6 +16,10 @@ function Destination({ topic, onNavigate }) {
 
 export default function Chatbot() {
   const [open, setOpen] = useState(false);
+  const [showWelcome, setShowWelcome] = useState(() => {
+    try { return sessionStorage.getItem('sotf-chat-welcome-seen') !== 'yes'; }
+    catch { return true; }
+  });
   const [messages, setMessages] = useState([]);
   const [draft, setDraft] = useState('');
   const [busy, setBusy] = useState(false);
@@ -32,6 +36,13 @@ export default function Chatbot() {
     if (conversation.current) conversation.current.scrollTop = conversation.current.scrollHeight;
   }, [messages, busy, open]);
   useEffect(() => () => pending.current?.abort(), []);
+
+  function dismissWelcome() {
+    setShowWelcome(false);
+    try { sessionStorage.setItem('sotf-chat-welcome-seen', 'yes'); } catch { /* Private browsing may disable storage. */ }
+  }
+
+  function startChat() { dismissWelcome(); setOpen(true); }
 
   function close() { setOpen(false); launcher.current?.focus(); }
 
@@ -67,6 +78,13 @@ export default function Chatbot() {
   }
 
   return <div className="sotf-chat">
+    {showWelcome && !open && <section className="chat-welcome" aria-labelledby="chat-welcome-title" onKeyDown={event => { if (event.key === 'Escape') { dismissWelcome(); launcher.current?.focus(); } }}>
+      <button className="chat-welcome-dismiss" type="button" aria-label="Dismiss assistant introduction" onClick={() => { dismissWelcome(); launcher.current?.focus(); }}>×</button>
+      <h2 id="chat-welcome-title">Welcome to Sound of the Future!</h2>
+      <p>Have a question? Our website assistant can help you explore our mission, volunteer opportunities, service hours, and ways to support our work.</p>
+      <button className="primary-button" type="button" onClick={startChat}>Ask a question →</button>
+      <button className="chat-welcome-later" type="button" onClick={() => { dismissWelcome(); launcher.current?.focus(); }}>Keep exploring</button>
+    </section>}
     {open && <section id="sotf-chat-panel" className="chat-panel" role="dialog" aria-labelledby="chat-title" aria-describedby="chat-disclosure" onKeyDown={event => { if (event.key === 'Escape') close(); }}>
       <header className="chat-header">
         <div><h2 id="chat-title">Ask Sound of the Future</h2><p>{mode === 'guide' ? 'Website guide' : mode === 'ai' ? 'AI website assistant' : 'Website guide · AI when connected'}</p></div>
@@ -88,9 +106,9 @@ export default function Chatbot() {
         <label className="chat-input-label" htmlFor="chat-question">Your question</label>
         <div className="chat-compose"><input ref={input} id="chat-question" value={draft} onChange={event => setDraft(event.target.value)} maxLength={1000} placeholder="Ask about our work…" autoComplete="off" /><button type="submit" disabled={busy || !draft.trim()}>Send <span aria-hidden="true">↑</span></button></div>
       </form>
-      <footer className="chat-footer"><p id="chat-disclosure">AI replies may make mistakes. Messages are sent to OpenAI when AI is connected. Please avoid personal or medical details.</p><div><Link to="/contact" onClick={() => setOpen(false)}>Contact our team</Link><button type="button" disabled={busy || messages.length === 0} onClick={() => { setMessages([]); setError(''); input.current?.focus(); }}>New chat</button></div></footer>
+      <footer className="chat-footer"><p id="chat-disclosure">AI replies may make mistakes. Messages are sent to Groq when AI is connected. Please avoid personal or medical details.</p><div><Link to="/contact" onClick={() => setOpen(false)}>Contact our team</Link><button type="button" disabled={busy || messages.length === 0} onClick={() => { setMessages([]); setError(''); input.current?.focus(); }}>New chat</button></div></footer>
     </section>}
-    <button ref={launcher} className="chat-launcher" type="button" aria-expanded={open} aria-controls="sotf-chat-panel" onClick={() => open ? close() : setOpen(true)}>
+    <button ref={launcher} className="chat-launcher" type="button" aria-expanded={open} aria-controls="sotf-chat-panel" onClick={() => open ? close() : startChat()}>
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-8 8H4l-2 2v-10a9 9 0 0 1 18 0Z" /><path d="M7 10h8M7 14h5" /></svg>
       {open ? 'Close chat' : 'Ask us a question'}
     </button>

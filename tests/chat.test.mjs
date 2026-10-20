@@ -26,36 +26,45 @@ test('endpoint rejects invalid payloads and cross-origin requests before upstrea
 });
 
 test('missing key uses labeled guide without contacting a provider', async () => {
-  const previous = process.env.OPENAI_API_KEY;
-  delete process.env.OPENAI_API_KEY;
+  const previous = process.env.GROQ_API_KEY;
+  delete process.env.GROQ_API_KEY;
   try {
     const response = await chat(request(valid));
     assert.equal(response.headers.get('Cache-Control'), 'no-store');
     const result = await response.json();
     assert.equal(result.mode, 'guide');
     assert.match(result.text, /240K\+/);
-  } finally { if (previous !== undefined) process.env.OPENAI_API_KEY = previous; }
+  } finally { if (previous !== undefined) process.env.GROQ_API_KEY = previous; }
 });
 
 test('AI path keeps key server-side, bounds output, preserves knowledge, and degrades on failure', async () => {
-  const oldKey = process.env.OPENAI_API_KEY;
+  const oldKey = process.env.GROQ_API_KEY;
   const oldFetch = globalThis.fetch;
-  process.env.OPENAI_API_KEY = 'test-only-key';
+  process.env.GROQ_API_KEY = 'test-only-key';
   try {
     globalThis.fetch = async (url, options) => {
-      assert.equal(url, 'https://api.openai.com/v1/responses');
+      assert.equal(url, 'https://api.groq.com/openai/v1/chat/completions');
       const payload = JSON.parse(options.body);
-      assert.equal(payload.store, false);
-      assert.equal(payload.max_output_tokens, 500);
-      assert.match(payload.instructions, /240K\+ people impacted/);
-      assert.match(payload.instructions, /1500\+ care packages distributed/);
-      assert.deepEqual(payload.input, valid.messages);
-      return Response.json({ status: 'completed', output: [{ type: 'message', role: 'assistant', content: [{ type: 'output_text', text: 'We have impacted 240K+ people.' }] }] });
+      assert.equal(payload.model, process.env.GROQ_MODEL || 'openai/gpt-oss-20b');
+      assert.equal(payload.max_completion_tokens, 1200);
+      assert.equal(options.headers.Authorization, 'Bearer test-only-key');
+      assert.match(payload.messages[0].content, /240K\+ people impacted/);
+      assert.match(payload.messages[0].content, /1500\+ care packages distributed/);
+      assert.deepEqual(payload.messages.slice(1), valid.messages);
+      return Response.json({ choices: [{ finish_reason: 'stop', message: { role: 'assistant', content: 'We have impacted 240K+ people.' } }] });
     };
     const result = await (await chat(request(valid))).json();
     assert.equal(result.mode, 'ai');
     assert.ok(result.sourceIds.includes('impact'));
     assert.ok(!JSON.stringify(result).includes('test-only-key'));
+    for (const response of [
+      Response.json({ error: 'quota exceeded' }, { status: 429 }),
+      Response.json({ choices: [{ finish_reason: 'length', message: { content: 'Incomplete' } }] }),
+      Response.json({ choices: [] }),
+    ]) {
+      globalThis.fetch = async () => response;
+      assert.equal((await (await chat(request(valid))).json()).mode, 'guide');
+    }
     globalThis.fetch = async () => Response.json({ error: 'test-only-key' }, { status: 401 });
     const fallback = await (await chat(request(valid))).json();
     assert.equal(fallback.mode, 'guide');
@@ -64,7 +73,7 @@ test('AI path keeps key server-side, bounds output, preserves knowledge, and deg
     assert.equal(config.rateLimit.windowLimit, 12);
   } finally {
     globalThis.fetch = oldFetch;
-    if (oldKey === undefined) delete process.env.OPENAI_API_KEY;
-    else process.env.OPENAI_API_KEY = oldKey;
+    if (oldKey === undefined) delete process.env.GROQ_API_KEY;
+    else process.env.GROQ_API_KEY = oldKey;
   }
 });
