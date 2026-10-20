@@ -23,7 +23,7 @@ export const impactStats = [
     "Hearing-health resources shared with our community.",
   ],
   [
-    "$1,200+",
+    "$3,000",
     "raised through Benevity",
     "Community contributions supporting our mission.",
   ],

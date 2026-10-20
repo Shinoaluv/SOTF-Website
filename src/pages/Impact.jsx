@@ -17,7 +17,7 @@ export default function Impact() {
         <nav className="section-nav" aria-label="Impact sections">
           <a href="#community">Community</a>
           <a href="#media">Media & education</a>
-          <a href="#supporters">Fundraising & supporters</a>
+          <a href="#supporters">Fundraising & sponsors</a>
         </nav>
       </section>
       <section className="impact-band">
@@ -171,7 +171,7 @@ export default function Impact() {
         </div>
         <div className="fundraising-row">
           <div>
-            <strong>$1,200+</strong>
+            <strong>$3,000</strong>
             <p>Raised through Benevity</p>
           </div>
           <div>
@@ -179,21 +179,29 @@ export default function Impact() {
             <p>Raised through market sales</p>
           </div>
         </div>
-        <h3 className="supporters-heading">Thank you to our supporters</h3>
-        <dl className="supporter-list">
-          <div>
-            <dt>Hopdoddy</dt>
-          </div>
-          <div>
-            <dt>JK Hair Salon</dt>
-          </div>
-          <div>
-            <dt>The Home Depot</dt>
-          </div>
-          <div>
-            <dt>Costco</dt>
-          </div>
-        </dl>
+        <h3 className="supporters-heading">Thank you to our sponsors</h3>
+        <ul className="sponsor-list" aria-label="Our sponsors">
+          <li>
+            <img src="/sponsors/hopdoddy.svg" alt="Hopdoddy" loading="lazy" />
+            <span aria-hidden="true">Hopdoddy</span>
+          </li>
+          <li>
+            <img src="/sponsors/jk-hair-salon.png" alt="JK Hair Salon" loading="lazy" />
+            <span aria-hidden="true">JK Hair Salon</span>
+          </li>
+          <li>
+            <img src="/sponsors/home-depot.svg" alt="The Home Depot" loading="lazy" />
+            <span aria-hidden="true">The Home Depot</span>
+          </li>
+          <li>
+            <img src="/sponsors/costco.png" alt="Costco" loading="lazy" />
+            <span aria-hidden="true">Costco</span>
+          </li>
+          <li>
+            <img src="/sponsors/half-price-books.png" alt="Half Price Books" loading="lazy" />
+            <span aria-hidden="true">Half Price Books</span>
+          </li>
+        </ul>
       </section>
       <section className="center-cta">
         <p className="section-label">What comes next starts with us</p>

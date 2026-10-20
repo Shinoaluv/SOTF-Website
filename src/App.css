@@ -1315,3 +1315,11 @@ figcaption {
 @media (max-width: 650px) {
   .service-opportunity { grid-template-columns: 1fr; gap: 12px; padding-block: 32px; }
 }
+
+.sponsor-list { list-style: none; margin: 0; padding: 32px 0 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 32px; border-top: 1px solid var(--border); }
+.sponsor-list li { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; min-height: 145px; text-align: center; }
+.sponsor-list img { width: 100%; max-width: 170px; height: 90px; object-fit: contain; }
+.sponsor-list span { font-weight: 650; font-size: 0.95rem; }
+.sponsor-list .sponsor-name { font-size: 1.4rem; }
+@media (max-width: 900px) { .sponsor-list { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 650px) { .sponsor-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; } }
