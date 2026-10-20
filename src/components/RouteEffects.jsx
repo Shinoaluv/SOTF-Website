@@ -6,6 +6,7 @@ const titles = {
   "/programs": "Our work",
   "/impact": "Our impact",
   "/get-involved": "Get involved",
+  "/get-involved/service-hours": "Earn Service Hours Online With Us",
   "/donate": "Donate",
   "/contact": "Contact",
 };

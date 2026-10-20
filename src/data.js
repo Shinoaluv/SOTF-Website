@@ -1,4 +1,6 @@
 export const links = {
+  ambassador: "https://docs.google.com/forms/d/1csafQZFGcweC5yD4nl31Rac2a7nYKuw9kx0NRLD9i18/edit",
+  serviceSubmission: "https://docs.google.com/forms/d/e/1FAIpQLSfaAJ0ZZaC_n10kiUJTLtf2EttjJ_ApP1vnf-lTi6ZAUyKV4Q/viewform?usp=header",
   join: "https://docs.google.com/forms/d/e/1FAIpQLSeQ38vtYixkA8x7kZ82njxivZf4nqXZUNuIjaK6EjWnwlEbgw/viewform?usp=dialog",
   donate: "https://www.zeffy.com/en-US/donation-form/sound-of-the-future",
   linktree: "https://linktr.ee/SoundoftheFuture",

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Chatbot from "./components/Chatbot";
 import RouteEffects from "./components/RouteEffects";
 
 import Home from "./pages/Home";
@@ -10,6 +11,7 @@ import About from "./pages/About";
 import Programs from "./pages/Programs";
 import Impact from "./pages/Impact";
 import GetInvolved from "./pages/GetInvolved";
+import ServiceHours from "./pages/ServiceHours";
 import Donate from "./pages/Donate";
 import Contact from "./pages/Contact";
 
@@ -25,6 +27,7 @@ function App() {
         <Route path="/programs" element={<Programs />} />
         <Route path="/impact" element={<Impact />} />
         <Route path="/get-involved" element={<GetInvolved />} />
+        <Route path="/get-involved/service-hours" element={<ServiceHours />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/contact" element={<Contact />} />
         <Route
@@ -43,6 +46,7 @@ function App() {
       </Routes>
 
       <Footer />
+      <Chatbot />
     </BrowserRouter>
   );
 }

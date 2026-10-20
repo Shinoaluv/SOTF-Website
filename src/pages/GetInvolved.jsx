@@ -38,19 +38,6 @@ function GetInvolved() {
       </div>
       <section className="card-grid">
         <div className="info-card">
-          <span>01</span>
-          <h3>Volunteer</h3>
-          <p>
-            Support community events, educational outreach, care packages,
-            social media, podcast projects, and other initiatives.
-          </p>
-          <a className="inline-link" href={links.join}>
-            Volunteer with us ↗
-          </a>
-        </div>
-
-        <div className="info-card">
-          <span>02</span>
           <h3>Start a Branch</h3>
           <p>
             Bring Sound of the Future to your school or community and lead local
@@ -58,37 +45,35 @@ function GetInvolved() {
           </p>
           <a
             className="inline-link"
-            href="mailto:soundofthefutureofficial@gmail.com?subject=Starting%20a%20Branch"
+            href={links.join}
           >
-            Ask about starting a branch →
+            Apply to start a branch ↗
           </a>
         </div>
 
         <div className="info-card">
-          <span>03</span>
           <h3>Partner With Us</h3>
           <p>
             We work with schools, hospitals, nonprofits, businesses, and
             community organizations to expand hearing-health education and
-            outreach.
+            outreach. Email us for more information.
           </p>
-          <Link className="inline-link" to="/contact">
-            Talk about a partnership →
-          </Link>
+          <a className="inline-link" href="mailto:soundofthefutureofficial@gmail.com?subject=Partnership%20Inquiry">
+            Email us about a partnership →
+          </a>
         </div>
 
         <div className="info-card">
-          <span>04</span>
           <h3>Bring Us to Your School</h3>
           <p>
             Invite our team to present a hearing-health workshop, educational
-            session, or awareness program for students.
+            session, or awareness program for students. Email us for more information.
           </p>
           <a
             className="inline-link"
             href="mailto:soundofthefutureofficial@gmail.com?subject=School%20Outreach%20Inquiry"
           >
-            Invite our team →
+            Email us about a school visit →
           </a>
         </div>
         <div className="info-card">
@@ -97,10 +82,16 @@ function GetInvolved() {
             Help share our mission and bring hearing-health awareness to your
             community.
           </p>
-          <a className="inline-link" href={links.linktree}>
-            Find the ambassador program on Linktree ↗
+          <a className="inline-link" href={links.ambassador}>
+            Apply to become an ambassador ↗
           </a>
         </div>
+      </section>
+
+      <section className="service-hours-intro wrap section-space" aria-labelledby="service-hours-heading">
+        <h2 id="service-hours-heading">Earn Service Hours Online With Us</h2>
+        <p>Support hearing-health education and accessibility from anywhere. Explore research, technology evaluation, and journalism opportunities, each worth 3 service hours.</p>
+        <Link className="primary-button" to="/get-involved/service-hours">Explore online volunteer opportunities →</Link>
       </section>
 
       <section className="center-cta">
